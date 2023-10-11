@@ -61,12 +61,16 @@ header nav > ul {
   list-style-type: none;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 header nav > ul a {
   padding: 0.5rem 1rem !important;
   text-decoration: none;
   color: var(--colors-white, #fff);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px; /* 144.444% */
 }
 header nav > ul li:first-child a {
   color: rgba(255, 255, 255, 0.3);
@@ -208,7 +212,7 @@ section form button {
   margin: 2rem 0;
 }
 .have-account-container > span {
-    margin-right: .5rem;
+  margin-right: 0.5rem;
   color: var(--colors-text, rgba(21, 20, 57, 0.4));
   text-align: center;
   font-size: 18px;
@@ -230,8 +234,8 @@ section form button {
     padding: 0 2rem;
   }
 }
-@media (max-width:470px){
-    main {
-        flex-direction: column-reverse;
-    }
+@media (max-width: 470px) {
+  main {
+    flex-direction: column-reverse;
+  }
 }
