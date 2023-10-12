@@ -95,6 +95,7 @@ main article h2 {
   letter-spacing: -1px;
 }
 main article p {
+  padding-right: 7rem;
   color: var(--colors-white, #fff);
   font-size: 22px;
   font-style: normal;
@@ -102,6 +103,7 @@ main article p {
   line-height: 32px; /* 145.455% */
 }
 main article button {
+  margin: 1rem 0;
   color: var(--colors-white, #fff);
   font-family: inherit;
   text-align: center;
@@ -227,6 +229,34 @@ section form button {
   font-style: normal;
   font-weight: 500;
   line-height: 28px; /* 155.556% */
+}
+
+footer{
+  height: 5rem;
+  width: 100%;
+}
+
+/* Custom Scrollbar */
+
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(46, 24, 147, 1);
+	border-radius: 10px;
+	background-color: transparent;
+}
+
+body::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb
+{
+  border: 2px solid rgb(96, 81, 162);
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(46, 24, 147, 1);
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
