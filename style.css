@@ -212,6 +212,7 @@ section form button {
 }
 .have-account-container {
   margin: 2rem 0;
+  text-align: center;
 }
 .have-account-container > span {
   margin-right: 0.5rem;
