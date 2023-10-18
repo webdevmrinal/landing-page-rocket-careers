@@ -10,6 +10,9 @@
     <header>
       <nav>
         <span>Startup 3</span>
+        <button class="menu-button">
+          <ion-icon name="reorder-three-outline"></ion-icon>
+        </button>
         <ul>
           <li><a href="#">Overview</a></li>
           <li><a href="#">Prices</a></li>
@@ -34,13 +37,14 @@
         <h3>Sign Up Now</h3>
         <form action="">
           <span
-            ><input class="email-input" type="text" placeholder="Your email"
+            ><input class="email-input" type="email" placeholder="Your email" required
           /></span>
           <span
             ><input
               class="password-input"
               type="password"
               placeholder="Your password"
+              required
           /></span>
           <span class="tos-container">
             <input type="checkbox" name="" id="tos" />
@@ -53,12 +57,39 @@
 
         <button class="cta-btn login-via-twitter-btn">Login via Twitter</button>
 
-        <div class="have-account-container"><span>Do you have an Account?</span><a href="#">Sign In</a></div>
+        <div class="have-account-container">
+          <span>Do you have an Account?</span><a href="#">Sign In</a>
+        </div>
       </section>
     </main>
 
     <footer>
       <!-- No content here at the moment -->
     </footer>
+
+    <script>
+      const menuButton = document.querySelector(".menu-button");
+      const navMenu = document.querySelector("header nav ul");
+
+      menuButton.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (navMenu.style.top === "-13rem" || navMenu.style.top === "")
+          navMenu.style.top = "-2rem";
+        else navMenu.style.top = "-13rem";
+      });
+
+      document.addEventListener('click', (e) => {
+        if(e.target !== navMenu) navMenu.style.top="-13rem"
+      })
+    </script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
   </body>
 </html>
